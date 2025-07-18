@@ -52,12 +52,26 @@ func main() {
 	}
 	for index , value :=range ages {
 		fmt.Println("the value at index ",index," is ",value)
-	}*/
+	}
 	var ages  = []int{10,20,30,40,50}
 	add(10,20)
 	remove(40,15)
 	equation(ages,add)
-	equation(ages,remove)
+	equation(ages,remove)*/
+	notes := map[string]float64{
+		"Analyse" : 10,
+		"Algo" : 15,
+		"Reseaux" : 14.5,
+		"BD" : 17.5,
+	}
+	fmt.Println(notes)
+	moy := 0.0
+	for k , v:= range notes {
+		fmt.Printf("la note du matière %s est %0.2f \n",k,v)
+		moy += v
+	}
+	moy = moy / float64(len(notes))
+	fmt.Printf("la moyenne des notes est de %0.2f \n",moy)
 
 
 }
